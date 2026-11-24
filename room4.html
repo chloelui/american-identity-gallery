@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Room 4 - Fighting for Representation and Equality</title>
+        <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@400;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <!-- data-room tells room.js which room's artifacts to load from data.js -->
+    <body class="room" data-room="room4">
+        <a class="nav-btn nav-left" href="index.html">Home</a>
+        <a class="nav-btn nav-right" href="resources.html">Resources</a>
+
+        <!-- #viewport = window you look through, hides anything wider than screen -->
+        <div id="viewport">
+            <!-- #world = wide hallway that JS slides left/right to scroll -->
+            <div id="world">
+                <div id="floor"></div>
+                <a id="door" href="index.html"><img src="images/door4.png" alt="Back to home"></a>
+                <!-- JS inserts artifacts here -->
+                <div id="avatar">
+                    <img id="avatar-body" src="images/avatar-body-side.png" alt="You">
+                    <img id="avatar-legs" src="images/avatar-legs-1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <p class="hint">Use ← → (or A / D) to walk. Click a plaque to read more.</p>
+
+        <!-- pop-up detail card, hidden until JS removes that attribute -->
+        <div id="overlay" hidden>
+            <div class="card">
+                <button id="close" aria-label="Close">×</button>
+                <h2 id="card-title"></h2>
+                <p id="card-meta"></p>
+                <p id="card-body"></p>
+            </div>
+        </div>
+
+        <script src="js/data.js"></script>  <!-- load data and code that uses it -->
+        <script src="js/room.js"></script>
+    </body>
+</html>
