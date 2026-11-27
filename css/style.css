@@ -6,6 +6,8 @@
     --tan:   #f3dfb8;   /* light checker tile */
     --serif: "Fraunces", serif;
     --sans: "Poppins", sans-serif;
+    --title-top: 5vh;
+    --title-size: 7vh;
 }
 
 /* ---------- RESET ---------- */
@@ -14,19 +16,21 @@ body { font-family: var(--sans); color: var(--ink); background: var(--cream); }
 
 /* ---------- NAV BUTTONS ---------- */
 .nav-btn {
-    position: fixed; top: 16px; z-index: 50;
+    position: fixed; z-index: 50;
+    top: calc(var(--title-top) + var(--title-size) * 0.55);
+    transform: translateY(-50%);
     padding: 8px 16px; background: var(--paper); color: var(--ink);
     border: 2px solid var(--ink); border-radius: 12px 14px 12px 15px;
     box-shadow: 3px 3px 0 var(--ink); text-decoration: none; font-weight: 700;
     transition: transform .1s;
 }
-.nav-btn:hover { transform: translate(-2px, -2px); }
-.nav-left { left: 16px; }
-.nav-right {right: 16px; }
+.nav-btn:hover { transform: translateY(-50%) translate(-2px, -2px); }
+.nav-left { left: 7vh; }
+.nav-right { right: 7vh; }
 
 /* ---------- HOME PAGE ---------- */
 body.home { height: 100vh; overflow: hidden; position: relative; }
-.title { font-family: var(--serif); font-weight: 700; text-align: center; padding-top: 5vh; font-size: 7vh; line-height: 1.1; }
+.title { font-family: var(--serif); font-weight: 700; text-align: center; padding-top: var(--title-top); font-size: var(--title-size); line-height: 1.1; }
 .title em { font-weight: 400; font-style: italic; color: var(--terra); }
 .doors {
     position: absolute; left: 0; right: 0; bottom: 22vh;
@@ -126,7 +130,7 @@ body.room { height: 100vh; overflow: hidden; }
          border: 0; color: var(--ink); cursor: pointer; }
 
 /* ---------- RESOURCES PAGE ---------- */
-body.resources { background: var(--terra); min-height: 100vh; padding: 90px 20px 40px; }
+body.resources { background: var(--terra); min-height: 100vh; padding: 16vh 20px 40px; }
 .paper { max-width: 760px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 14px; color: #222; }
 .paper h2 { font-family: var(--serif); margin-bottom: 20px; color: var(--ink); }
 .paper li { margin: 0 0 14px 20px; line-height: 1.5; }
