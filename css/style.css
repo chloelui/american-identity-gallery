@@ -40,7 +40,13 @@ body.home { height: 100vh; overflow: hidden; position: relative; }
 .door { width: 19vw; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-decoration: none; transition: transform .15s; }
 .door:hover { transform: translateY(-6px); }
 .door img { width: 100%; display: block; }
-.plaque-img { margin-bottom: 1.5vh; max-height: 14vh; object-fit: contain; }
+.door .plaque-img {
+    width: 97%;
+    max-height: 24vh;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: -5vh;
+}
 .door-img {max-height: 50vh; object-fit: contain; }
 body.home::after {                          /* the checkered floor drawn w/ pure CSS */
     content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22vh;
